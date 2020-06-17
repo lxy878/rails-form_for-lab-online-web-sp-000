@@ -4,7 +4,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    school_class =
+    school_class = SchoolClass.create(post_params)
   end
 
   def show
@@ -17,7 +17,7 @@ class SchoolClassesController < ApplicationController
 
   def update
     @school_class = SchoolClass.find(params[:id])
-    
+
   end
 
   def post_params
