@@ -796,3 +796,23 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/school_classes/1/edit" for 108.46.152.116 at 2020-06-17 08:08:39 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/1" for 108.46.152.116 at 2020-06-17 08:08:47 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HtO70iwWjdeSbpdLea+Jxu5FdmkeyNwZdoBI61peO9BXtsbRrB6297vbu8ZDr4v5vEjUSHylA1DHNH4C4uPfLQ==", "school_class"=>{"title"=>"aaaa", "room_number"=>"113"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "room_number" = ? WHERE "school_classes"."id" = ?[0m  [["title", "aaaa"], ["room_number", 113], ["id", 1]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.203.187.180:50716/school_classes/1
+Completed 302 Found in 18ms (ActiveRecord: 12.5ms)
+
+
