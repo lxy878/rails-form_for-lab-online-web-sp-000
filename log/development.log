@@ -761,3 +761,23 @@ Processing by SchoolClassesController#new as HTML
 Completed 200 OK in 313ms (Views: 306.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/school_classes/new" for 108.46.152.116 at 2020-06-17 08:07:23 +0000
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for 108.46.152.116 at 2020-06-17 08:07:34 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4yz8I0V5r73CJYNo37jlbDT5Wo8yBel1SyBgudshQoS6c7zDR3dnt69uoCZfuGq4t5HS16lyOxkmLdrX9Fh9w==", "school_class"=>{"title"=>"sdfdf", "room_number"=>"123"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number") VALUES (?, ?)[0m  [["title", "sdfdf"], ["room_number", 123]]
+  [1m[35m (57.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.203.187.180:50716/school_classes/1
+Completed 302 Found in 62ms (ActiveRecord: 57.6ms)
+
+
+Started GET "/school_classes/1" for 108.46.152.116 at 2020-06-17 08:07:35 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
