@@ -17,7 +17,7 @@ class SchoolClassesController < ApplicationController
 
   def update
     @school_class = SchoolClass.find(params[:id])
-
+    
   end
 
   def post_params
